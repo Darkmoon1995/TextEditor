@@ -1,1 +1,3 @@
-MakeFile
+# Ignore all files named Makefile
+Makefile
+*.o
