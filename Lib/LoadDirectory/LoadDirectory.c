@@ -1,14 +1,10 @@
 #include "LoadDirectory.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 char* LoadDirectory(char *CurrentDirectory){
     printf("\033[H\033[J"); 
     char DirecotryForLsHelper[1024]; 
     
-    sprintf(DirecotryForLsHelper, "ls -p %s > /tmp/FileLocationForCodeEditor", CurrentDirectory);
-    
+    sprintf(DirecotryForLsHelper, "ls -pa %s > /tmp/FileLocationForCodeEditor", CurrentDirectory);
 
     system(DirecotryForLsHelper);
     
@@ -49,7 +45,6 @@ char* LoadDirectory(char *CurrentDirectory){
             }
             if(FullDirectoryContext[Length] == '\n'){
                 LineNumber++;
-                printf("\n");
             }
         }
         printf("\n\033[31;47m Q = Quit\033[0m");

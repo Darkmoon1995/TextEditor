@@ -5,8 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "Lib/file_reader/file_reader.h"
-#include "Lib/string_utils/string_utils.h"
+#include "../file_reader/file_reader.h"
+#include "../string_utils/string_utils.h"
 
 char* LoadDirectory(char *CurrentDirectory);
 
